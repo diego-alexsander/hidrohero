@@ -1,0 +1,36 @@
+<ion-view view-title="Sobre sua família">
+	<ion-content class="padding" scroll="false">
+	<div class="row">
+		<div class="col">
+			<h4>Nickname, sua aventura no HidroHero já começou!</h4>
+			<p>Com a ajuda de um adulto, responda às perguntas abaixo.</p>
+		</div>
+	</div>
+		<div class="row">
+				<div class="col">
+					<p class="no-mg">Quantas pessoas moram na sua casa?</p>
+					<label class="item item-input no-mg">
+						<input type="number" ng-model="user.family">
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="no-mg">Qual o consumo médio de água que aparece na conta?</p>
+					<label class="item item-input no-mg">
+						<input type="number" ng-model="user.consume">
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="no-mg">Que número está aparecendo no relógio de água?</p>
+					<label class="item item-input no-mg">
+						<input type="number" ng-model="user.hydrometer">
+					</label>
+				</div>
+			</div>
+		</div>
+		<button ng-click="calculateInicialPoints(user.family, user.consume, user.hydrometer);" class="mdl-button mdl-button--raised mdl-button--colored btn-entrar">Calcular pontuação</button>
+	</ion-content>
+</ion-view>

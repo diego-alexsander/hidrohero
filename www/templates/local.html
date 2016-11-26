@@ -1,0 +1,24 @@
+<ion-view view-title="Seu Bairro">
+	<ion-content class="padding" scroll="false">
+	<div class="title-center">
+			<p class="aviso-text">
+				Você esta no bairro: <br />
+				<strong>Cidade Nova I</strong> em <strong>Indaiatuba</strong>
+			</p>
+		</div>
+		<div class="col">
+			<div style="height: 300px;" id="map" data-tap-disabled="true"></div>
+		</div>
+
+		<div class="col">
+			<p class="text-center">
+				Para continuar, por favor nos diga seu nome:
+			</p>
+			<label class="item item-input">
+			    <input type="text" name="userName" placeholder="Digite seu nome" ng-model="userName">
+			</label>
+		</div>
+	</div>
+	<button ng-click="createUser(userName);" class="mdl-button mdl-button--raised mdl-button--colored btn-entrar">Continuar</button>
+</ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-view view-title="Missão">
+	<ion-content class="padding" scroll="false">
+		<ion-slide-box on-slide-changed="slideChanged($index)" ng-init="lockSlide()">
+		  <ion-slide ng-repeat="quiz in quizzes" class="quiz-wrapper">
+		  <div class="row">
+		  	<div class="col">
+	  		    <div class="box blue">
+	  		    	<h3>
+	  		    		Qual é a ferramenta correta para molhar as plantas?
+	  		    	</h3>
+	  		    </div>
+	  		  <p class="aviso-text" ng-class="isCorrect == 1 ? 'correct-bg':'incorrect-bg'" ng-show="hasResponse != 0">
+	  		  	Você
+	  			  	<strong ng-show="isCorrect == 1">acertou</strong>
+	  			  	<strong ng-show="isCorrect == 0">errou</strong>
+	  		  	esta questão
+	  		  </p>
+		  	</div>
+		  </div>
+		  <div class="row">
+			    <div class="col txt-center">
+				    <div class="img-quiz">
+				    	<div class="unableClick" ng-hide="hasResponse == 0">
+				    	</div>
+					    <img
+					    width="150"
+					    heigth="150"
+						    ng-click="answerQuestion($event, quiz.resposta1)"
+					    	ng-src="/img/regador.jpg"
+					    />
+				    </div>
+			    </div>
+			    <div class="col txt-center">
+				    <div class="img-quiz">
+					    <div class="unableClick" ng-hide="hasResponse == 0">
+					    </div>
+				        <img
+				        width="150"
+				        heigth="150"
+				    	    ng-click="answerQuestion($event, quiz.resposta2)"
+				        	ng-src="/img/mangueira.jpg"
+				        />
+				    </div>
+			    </div>
+		  </div>
+		  </ion-slide>
+		</ion-slide-box>
+		<div class="row">
+			<div class="col">
+				<button ng-disabled="hasResponse == 0" ng-click="nextQuiz();" class="mdl-button mdl-button--raised mdl-button--colored btn-entrar">Próximo</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view view-title="Consumo de água">
+	<ion-content class="padding" scroll="false">
+		<div class="list">
+			<div class="row">
+				<div class="col">
+					<p class="no-mg">Que número está aparecendo no relógio de água?</p>
+					<label class="item item-input no-mg">
+						<input type="number" ng-model="user.hydrometer" ng-maxlength="6" />
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button ng-click="closeMission(dataMeasurement.userId, dataMeasurement.userHydrometer);" class="mdl-button mdl-button--raised mdl-button--colored btn-entrar">Finalizar Missão</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
